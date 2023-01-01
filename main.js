@@ -37,6 +37,7 @@ async function getMealsBySearch(term) {
 }
 function addMeal(mealData, random = false) {
   const meal = document.createElement("div");
+  mealsEl.innerHTML = "";
   console.log(mealData);
   meal.classList.add("meal");
 
@@ -71,7 +72,7 @@ function addMeal(mealData, random = false) {
       addMealLS(mealData.idMeal);
       btn.classList.add("active");
     }
-
+    getRandomMeal();
     fetchFavMeals();
   });
   popShow.addEventListener("click", () => {
@@ -164,6 +165,7 @@ function showMealInfo(mealData) {
   // show the popup
   mealPopup.classList.remove("hidden");
 }
+searchTerm.addEventListener("click", () => {});
 searchBtn.addEventListener("click", async () => {
   mealsEl.innerHTML = "";
   const search = searchTerm.value;
