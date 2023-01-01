@@ -165,7 +165,7 @@ function showMealInfo(mealData) {
   // show the popup
   mealPopup.classList.remove("hidden");
 }
-searchTerm.addEventListener("click", () => {});
+
 searchBtn.addEventListener("click", async () => {
   mealsEl.innerHTML = "";
   const search = searchTerm.value;
